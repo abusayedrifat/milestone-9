@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'; // ES6
 const Home = () => {
     return (
         <div>
-            <p>home</p>
+            <p className=' text-5xl font-poppins font-bold'>This is home</p>
         </div>
     );
 };
