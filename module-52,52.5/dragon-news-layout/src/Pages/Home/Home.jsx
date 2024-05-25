@@ -3,11 +3,13 @@ import Header from '../Shared/Header/Header';
 import Navbar from '../Shared/Navbar/Navbar';
 import LeftSideNav from '../Shared/LeftSideNav/LeftSideNav';
 import RightSideNavbar from '../Shared/RightSideNavbar/RightSideNavbar';
+import NewsHeadline from './NewsHeadline';
 
 const Home = () => {
     return (
         <div>
             <Header></Header>
+            <NewsHeadline></NewsHeadline>
             <Navbar></Navbar>
             <p className=' text-5xl font-poppins font-bold'>This is home</p>
             <div className=' grid grid-cols-1 lg:grid-cols-4 gap-6'>

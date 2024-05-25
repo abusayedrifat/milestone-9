@@ -10,12 +10,7 @@ const Header = () => {
                 <span className="text-[#403F3F]">{moment().format("dddd")}</span>
             {moment().format(" MMMM D, YYYY")}
             </p>
-            <div className="flex gap-6 w-full bg-[#F3F3F3] p-4 items-center">
-                <button className="btn bg-[#D72050] text-white rounded-none">Latest</button>
-                <p className="font-semibold text-[#403F3F]">
-                Match Highlights: Germany vs Spain — as it happened   !   Match Highlights: Germany vs Spain as...
-                </p>
-            </div>
+           
         </div>
     );
 };
