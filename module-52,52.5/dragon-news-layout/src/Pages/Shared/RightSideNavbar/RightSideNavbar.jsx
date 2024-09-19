@@ -61,21 +61,21 @@ const RightSideNavbar = () => {
         </h3>
         <div className="border-2 border-[#403F3F] rounded-lg">
           <a
-            className="flex items-center gap-2 justify-center p-4 lg:justify-start"
+            className="flex items-center gap-2 hover:bg-gray-400 hover:rounded-t-lg justify-center p-4  lg:justify-start"
             href=""
           >
             <FaFacebook className="text-xl"></FaFacebook>
             Facebook
           </a>
           <a
-            className="flex items-center gap-2 justify-center border-y-2 border-[#403F3F] p-4 lg:justify-start"
+            className="flex items-center gap-2 hover:bg-gray-400 justify-center border-y-2 border-[#403F3F] p-4 lg:justify-start"
             href=""
           >
             <FaXTwitter className="text-xl"></FaXTwitter>
             Twitter
           </a>
           <a
-            className="flex items-center gap-2 justify-center p-4 lg:justify-start"
+            className="flex items-center gap-2 hover:bg-gray-400 hover:rounded-b-lg justify-center p-4 lg:justify-start"
             href=""
           >
             <FaInstagram className="text-xl"></FaInstagram>
