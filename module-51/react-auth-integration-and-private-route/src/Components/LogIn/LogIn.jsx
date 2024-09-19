@@ -49,7 +49,7 @@ const LogIn = () => {
               required
             />
             <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
+              <a href="#" className="label-text-alt link link-hover font-bold">
                 Forgot password?
               </a>
             </label>

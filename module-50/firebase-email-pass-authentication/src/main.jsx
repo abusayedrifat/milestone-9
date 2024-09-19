@@ -12,7 +12,7 @@ import Header from './components/Header/Header';
 import Root from './Root';
 import ResetPassword from './components/ResetPassword/ResetPassword';
 import { HelmetProvider } from 'react-helmet-async';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const router = createBrowserRouter([
   {
