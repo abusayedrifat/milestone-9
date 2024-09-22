@@ -4,11 +4,13 @@ import RightSideNavbar from "../Shared/RightSideNavbar/RightSideNavbar";
 import { FaLongArrowAltLeft  } from "react-icons/fa";
 
 const NewsDetails = () => {
-    const newsData = useLoaderData()
+    const newsData = useLoaderData()    
     const {category_id} = useParams()
     const newsId = parseInt(category_id)
     const exactNews = newsData.find(news => news.category_id == newsId ) 
     const {details,title,image_url} = exactNews
+    console.log(exactNews);
+    
     return (
         <div >
             <Header></Header>
