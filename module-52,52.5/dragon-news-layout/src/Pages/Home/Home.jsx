@@ -6,9 +6,16 @@ import RightSideNavbar from "../Shared/RightSideNavbar/RightSideNavbar";
 import NewsHeadline from "./NewsHeadline";
 import { useLoaderData } from "react-router-dom";
 import Newses from "./Newses";
+import { useEffect } from "react";
 
 const Home = () => {
   const newses = useLoaderData();
+  
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div>
       <Header></Header>

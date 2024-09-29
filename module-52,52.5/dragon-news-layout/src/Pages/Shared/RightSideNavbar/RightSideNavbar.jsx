@@ -6,6 +6,9 @@ import {
 import { FaGoogle, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
 import auth from "../../../firebase.config";
 import { FaXTwitter } from "react-icons/fa6";
+import pic1 from '../../../assets/qZone1.png';
+import pic2 from '../../../assets/qZone2.png';
+import pic3 from '../../../assets/qZone3.png';
 
 const RightSideNavbar = () => {
   const gitHubProvider = new GithubAuthProvider();
@@ -91,9 +94,9 @@ const RightSideNavbar = () => {
           Q-Zone
         </h3>
         <div className="space-y-5">
-        <img className=" lg:w-full" src="/src/assets/qZone1.png" alt="" />
-        <img className=" lg:w-full" src="/src/assets/qZone2.png" alt="" />
-        <img className=" lg:w-full" src="/src/assets/qZone3.png" alt="" />
+        <img className=" lg:w-full" src={pic1} alt="" />
+        <img className=" lg:w-full" src={pic2} alt="" />
+        <img className=" lg:w-full" src={pic3} alt="" />
         </div>
         </div>
 

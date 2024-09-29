@@ -3,7 +3,7 @@ import "./Header.css";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 const Header = () => {
-  const navbar = 
+  const navbar = (
     <>
       <li className=" hover:bg-slate-300 rounded-md px-4 py-2 ">
         <NavLink to="/">Home</NavLink>
@@ -14,25 +14,23 @@ const Header = () => {
       <li className=" hover:bg-slate-300 rounded-md px-4 py-2 ">
         <NavLink to="/info">Info</NavLink>
       </li>
-      <li className=" hover:bg-slate-300 rounded-md px-4 py-2 ">
-        <NavLink to="about">About</NavLink>
-      </li>
+  
     </>
+  );
 
-  const {user, logOut} = useContext(AuthContext)
-  const navigate = useNavigate()
- 
-  const handleLogOut = () =>{
-      logOut()
-      .then(result =>{
-        navigate('/logIn')
-        console.log('logged out', result);
+  const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    logOut()
+      .then((result) => {
+        navigate("/logIn");
+        console.log("logged out", result);
       })
-      .catch(error =>{
+      .catch((error) => {
         console.log(error.message);
-        
-      })
-  }
+      });
+  };
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -69,10 +67,33 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-         {
+          <div className="dropdown dropdown-bottom dropdown-end">
+            <div className="h-14 w-14  cursor-pointer">
+              {
+              user? <img tabIndex={0} src={user.photoURL} className="rounded-full" alt="" /> : <NavLink to='/logIn' className="btn">LogIn</NavLink>
+            }
+            </div>
+            
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+            >
+              <li>
+                {
+                  user&&<button onClick={handleLogOut}>logOut</button> 
+                }
+              </li>
+              <li>
+                {
+                  user && (user.email)
+                }
+              </li>
+             
+            </ul>
+          </div>
+          {/* {
           user ? <button onClick={handleLogOut} className="btn">LogOut</button> :  <Link to='/logIn' className="btn">LogIn</Link>
-         }
-          
+         } */}
         </div>
       </div>
     </div>

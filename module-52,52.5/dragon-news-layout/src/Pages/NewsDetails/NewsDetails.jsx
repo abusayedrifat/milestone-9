@@ -2,6 +2,7 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 import Header from "../Shared/Header/Header";
 import RightSideNavbar from "../Shared/RightSideNavbar/RightSideNavbar";
 import { FaLongArrowAltLeft  } from "react-icons/fa";
+import { useEffect } from "react";
 
 const NewsDetails = () => {
     const newsData = useLoaderData()    
@@ -10,7 +11,11 @@ const NewsDetails = () => {
     const exactNews = newsData.find(news => news.category_id == newsId ) 
     const {details,title,image_url} = exactNews
     console.log(exactNews);
-    
+  
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      
     return (
         <div >
             <Header></Header>

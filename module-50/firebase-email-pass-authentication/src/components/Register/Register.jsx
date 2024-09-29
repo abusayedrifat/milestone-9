@@ -25,7 +25,7 @@ const Register = () => {
     e.target.password.value = "";
     e.target.text.value = "";
     e.target.terms = false;
-    
+
     setSubmitError("");
     setSubmitSuccess("");
     if (!acceptTerms) {
@@ -54,7 +54,6 @@ const Register = () => {
       .catch(() => {
         setSubmitError("user already exists");
       });
-    
   };
   //keyUp event
   const handlePassword = (e) => {

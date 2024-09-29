@@ -4,7 +4,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const LogIn = () => {
-    const {logInUser} = useContext(AuthContext)
+    const {logInUser, googleLogIn} = useContext(AuthContext)
     const navigate = useNavigate()
 
     const handleLogIn = e =>{
@@ -21,7 +21,20 @@ const LogIn = () => {
         .catch(error =>{
             console.log(error.message);
             
-        })
+        });
+    }
+
+    const handleGoogleLogIn = e =>{
+          e.preventDefault()
+           googleLogIn()
+          .then(result =>{
+            console.log(result.user)
+          })
+          .catch(error => { 
+            
+            console.log(error.message)
+            
+          })
     }
   return (
     <div className="flex flex-col justify-center items-center">
@@ -63,12 +76,14 @@ const LogIn = () => {
           </form>
         </div>
       </div>
+      <button onClick={handleGoogleLogIn} className="btn w-[30%]">Google logIn</button>
       <div className="text-center">
         <p>Don&apos;t have an account?</p>{" "}
         <NavLink to="/register" className="underline  font-semibold">
           Register Now
         </NavLink>
       </div>
+      
     </div>
   );
 };
